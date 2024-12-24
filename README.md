@@ -10,8 +10,8 @@
 - React Native
 - TypeScript
 - Nativewind
-- Appwrite
 - Tailwind CSS
+- Appwrite
 
 ## <a name="features">🔋 Features</a>
 
