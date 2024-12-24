@@ -10,18 +10,27 @@ import {
 import { useEffect } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 import icons from "@/constants/icons";
-
 import Search from "@/components/Search";
 import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
 import { Card, FeaturedCard } from "@/components/Cards";
-
 import { useAppwrite } from "@/lib/useAppwrite";
 import { useGlobalContext } from "@/lib/global-provider";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 // import seed from "@/lib/seed";
+
+const getGreeting = () => {
+  const currentHour = new Date().getHours();
+
+  if (currentHour < 12) {
+    return "Good Morning";
+  } else if (currentHour < 18) {
+    return "Good Afternoon";
+  } else {
+    return "Good Evening";
+  }
+};
 
 const Home = () => {
   const { user } = useGlobalContext();
@@ -87,7 +96,7 @@ const Home = () => {
 
                 <View className="flex flex-col items-start ml-2 justify-center">
                   <Text className="text-xs font-rubik text-black-100">
-                    Good Morning
+                    {getGreeting()}
                   </Text>
                   <Text className="text-base font-rubik-medium text-black-300">
                     {user?.name}
