@@ -4,6 +4,8 @@
 
 - This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+![Restate](https://github.com/user-attachments/assets/5a52034c-dde1-4e28-bc8a-297125ae75be)
+
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Expo
